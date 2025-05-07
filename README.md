@@ -6,3 +6,5 @@ The template for assignment been taken from our previous class discussion up to 
 - tree_delete
 
 In the main.rs you need to prepare various cases to validate the correctness of your own implementation. 
+
+Don't forget to put your name on top of the readme.

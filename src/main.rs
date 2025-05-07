@@ -111,6 +111,19 @@ fn test_binary_search_tree(){
         } else {
             println!("node with key of {} does not exist, failed to get successor", key)
         }
+
+        let mut rootlink2 = Some(BstNode::tree_insert(&None,&15));
+        let keys = vec![6,18,3,7,17,20,2,4,13,9];
+        for k in &keys{
+            rootlink2 = Some(BstNode::tree_insert(&rootlink2, k));
+        }
+
+        //test the insertion by printing the tree
+        generate_dotfile_bst(&rootlink2.as_ref().unwrap(), "bst.dot");
+
+        //test removal
+        let rootalter = BstNode::tree_delete(&rootlink2.as_ref().unwrap());
+        generate_dotfile_bst(&rootalter, "bst_delete_root.dot");
     }
 }
 
